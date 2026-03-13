@@ -729,7 +729,9 @@ textarea:focus {
     --cube-size: 210px;
     transform: rotateX(-30deg) rotateY(30deg) rotateZ(2deg);
     animation-name: spinCubeTablet;
-    animation-duration: 10.5s;
+    animation-duration: 6.8s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
   }
 
   .cards-grid,
@@ -867,7 +869,9 @@ textarea:focus {
     --cube-size: 190px;
     transform: rotateX(-34deg) rotateY(34deg) rotateZ(3deg);
     animation-name: spinCubeMobile;
-    animation-duration: 9.8s;
+    animation-duration: 5.8s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
   }
 
   .cube-face {
@@ -973,31 +977,25 @@ textarea:focus {
 
 @keyframes spinCubeTablet {
   0% {
-    transform: rotateX(-30deg) rotateY(20deg) rotateZ(1deg);
+    transform: rotateX(-30deg) rotateY(24deg) rotateZ(1deg);
   }
-  33% {
-    transform: rotateX(-24deg) rotateY(122deg) rotateZ(-1deg);
-  }
-  66% {
-    transform: rotateX(-34deg) rotateY(238deg) rotateZ(3deg);
+  50% {
+    transform: rotateX(-24deg) rotateY(40deg) rotateZ(-1deg);
   }
   100% {
-    transform: rotateX(-30deg) rotateY(380deg) rotateZ(1deg);
+    transform: rotateX(-34deg) rotateY(56deg) rotateZ(2deg);
   }
 }
 
 @keyframes spinCubeMobile {
   0% {
-    transform: rotateX(-34deg) rotateY(28deg) rotateZ(2deg);
+    transform: rotateX(-34deg) rotateY(30deg) rotateZ(2deg);
   }
-  34% {
-    transform: rotateX(-27deg) rotateY(130deg) rotateZ(-1deg);
-  }
-  68% {
-    transform: rotateX(-36deg) rotateY(248deg) rotateZ(3deg);
+  50% {
+    transform: rotateX(-27deg) rotateY(42deg) rotateZ(-1deg);
   }
   100% {
-    transform: rotateX(-34deg) rotateY(388deg) rotateZ(2deg);
+    transform: rotateX(-38deg) rotateY(54deg) rotateZ(3deg);
   }
 }
 

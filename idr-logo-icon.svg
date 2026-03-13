@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">Institute of Digital Risk Cube Icon</title>
+  <desc id="desc">Geometric wireframe cube with layered inner structure in orange and white.</desc>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="80 18 128 46 128 104 80 132 32 104 32 46" stroke="#FF6A00" stroke-width="4"/>
+    <polyline points="80 18 80 76 32 104" stroke="#FF6A00" stroke-width="4"/>
+    <polyline points="80 76 128 104" stroke="#FF6A00" stroke-width="4"/>
+    <polyline points="80 76 32 46" stroke="#FFFFFF" stroke-width="3" opacity="0.9"/>
+    <polyline points="80 76 128 46" stroke="#FFFFFF" stroke-width="3" opacity="0.9"/>
+    <polyline points="80 132 80 76" stroke="#FFFFFF" stroke-width="3" opacity="0.9"/>
+    <polygon points="80 34 112 52 112 88 80 106 48 88 48 52" stroke="#FF6A00" stroke-width="3" opacity="0.85"/>
+    <circle cx="80" cy="76" r="3.5" fill="#FF6A00" stroke="none"/>
+  </g>
+</svg>

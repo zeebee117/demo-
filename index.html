@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Institute of Digital Risk | 3D Cube Risk Visualization</title>
+    <meta
+      name="description"
+      content="Institute of Digital Risk (IDR): advancing digital risk, cyber resilience, and AI governance through academy, innovation, and advisory services."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="top" aria-hidden="true"></div>
+    <div class="ambient-bg" aria-hidden="true">
+      <span class="orb orb-a"></span>
+      <span class="orb orb-b"></span>
+      <span class="orb orb-c"></span>
+    </div>
+
+    <header class="site-header" id="home">
+      <nav class="nav-wrap" aria-label="Main navigation">
+        <a class="brand js-scroll" href="#top" aria-label="Institute of Digital Risk home">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" aria-hidden="true">
+            <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="80 18 128 46 128 104 80 132 32 104 32 46" stroke="#FF6A00" stroke-width="4"/>
+              <polyline points="80 18 80 76 32 104" stroke="#FF6A00" stroke-width="4"/>
+              <polyline points="80 76 128 104" stroke="#FF6A00" stroke-width="4"/>
+              <polyline points="80 76 32 46" stroke="#FFFFFF" stroke-width="3" opacity="0.9"/>
+              <polyline points="80 76 128 46" stroke="#FFFFFF" stroke-width="3" opacity="0.9"/>
+              <polyline points="80 132 80 76" stroke="#FFFFFF" stroke-width="3" opacity="0.9"/>
+              <polygon points="80 34 112 52 112 88 80 106 48 88 48 52" stroke="#FF6A00" stroke-width="3" opacity="0.85"/>
+              <circle cx="80" cy="76" r="3.5" fill="#FF6A00" stroke="none"/>
+            </g>
+          </svg>
+          <span class="brand-text">
+            <span class="brand-top">INSTITUTE OF</span>
+            <span class="brand-bottom">DIGITAL RISK</span>
+          </span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-links" id="site-menu">
+          <a class="js-scroll is-active" href="#top">Home</a>
+          <a class="js-scroll" href="#about">About</a>
+          <a class="js-scroll" href="#model">Model</a>
+          <a class="js-scroll" href="#community">Community</a>
+          <a class="js-scroll" href="#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-label="Hero">
+        <div class="hero-copy" data-reveal data-parallax="0.08">
+          <span class="hero-kicker">3D Cube Risk Visualization</span>
+          <h1>Advancing the Future of Digital Risk</h1>
+          <p>
+            IDR trains and deploys digital risk practitioners through a hybrid model that combines
+            academic research with industry practice, building resilient talent for complex cyber
+            and technology risk environments.
+          </p>
+          <div class="hero-cta">
+            <a href="#model" class="btn btn-primary js-scroll">Explore Programs</a>
+            <a href="#contact" class="btn js-scroll">Hire Talent</a>
+          </div>
+        </div>
+
+        <div class="hero-visual no-transform-reveal" aria-hidden="true" data-reveal>
+          <div class="cube-scene">
+            <div class="cube-face front"></div>
+            <div class="cube-face back"></div>
+            <div class="cube-face right"></div>
+            <div class="cube-face left"></div>
+            <div class="cube-face top"></div>
+            <div class="cube-face bottom"></div>
+            <div class="inner-cube"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" aria-labelledby="about-title">
+        <h2 class="section-title" id="about-title" data-reveal>About IDR</h2>
+        <div class="about-copy" data-reveal>
+          <p>
+            Institute of Digital Risk is an industry-led training and deployment institute focused on
+            digital risk, cyber risk, and AI governance. We prepare professionals to assess, model,
+            and control technology risk across modern digital ecosystems.
+          </p>
+          <p>
+            Working alongside university partners, including collaborations with UK institutions,
+            IDR connects academic rigor to real-world industry projects so graduates can deliver
+            practical impact from day one.
+          </p>
+        </div>
+      </section>
+
+      <section id="model" aria-labelledby="model-title">
+        <h2 class="section-title" id="model-title" data-reveal>Service Model</h2>
+        <p class="section-intro" data-reveal>
+          Our cube-structured model connects capability building, innovation, and governance implementation.
+        </p>
+
+        <div class="cards-grid">
+          <article class="cube-card js-tilt" data-reveal>
+            <h3>Academy</h3>
+            <p>Training programs and digital risk bootcamps for market-ready practitioners.</p>
+          </article>
+
+          <article class="cube-card js-tilt" data-reveal>
+            <h3>Innovation &amp; Incubation</h3>
+            <p>Developing future risk models and AI governance frameworks for changing digital landscapes.</p>
+          </article>
+
+          <article class="cube-card js-tilt" data-reveal>
+            <h3>Advisory Services</h3>
+            <p>Helping organizations operationalize standards and control programs.</p>
+            <ul>
+              <li>NIST</li>
+              <li>ISO 27001</li>
+              <li>NIS2</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="pipeline" data-reveal>
+          <h3>Talent &amp; Capability Pipeline</h3>
+          <div class="pipeline-track" role="img" aria-label="Train to Hire to Innovate to Deploy pipeline">
+            <div class="pipeline-step">Train</div>
+            <div class="pipeline-arrow">&#8594;</div>
+            <div class="pipeline-step">Hire</div>
+            <div class="pipeline-arrow">&#8594;</div>
+            <div class="pipeline-step">Innovate</div>
+            <div class="pipeline-arrow">&#8594;</div>
+            <div class="pipeline-step">Deploy</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="community" aria-labelledby="community-title">
+        <h2 class="section-title" id="community-title" data-reveal>Community</h2>
+        <div class="community-grid">
+          <p class="section-intro" data-reveal>
+            IDR serves students, early-career professionals, cybersecurity practitioners, and leaders in
+            financial services and critical infrastructure sectors who need practical digital risk capability.
+          </p>
+          <ul class="community-list" data-reveal>
+            <li>Students and graduates building risk careers</li>
+            <li>Early-career professionals transitioning into cyber and AI governance roles</li>
+            <li>Cybersecurity specialists broadening into enterprise risk management</li>
+            <li>Professionals supporting financial services and critical infrastructure resilience</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="contact" aria-labelledby="contact-title">
+        <h2 class="section-title" id="contact-title" data-reveal>Contact</h2>
+        <div class="contact-wrap">
+          <aside class="contact-card" data-reveal>
+            <p class="section-intro">
+              Connect with IDR for programs, hiring pathways, or advisory engagements.
+            </p>
+            <p>Email: contact@idr.org</p>
+          </aside>
+
+          <div class="contact-form" data-reveal>
+            <form>
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your name" required />
+
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@domain.com" required />
+
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell us how we can support your digital risk goals." required></textarea>
+
+              <button type="submit" class="btn btn-primary">Register Interest</button>
+              <p class="form-note">We usually respond within 2 business days.</p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-wrap">
+        <strong>Institute of Digital Risk</strong>
+        <div class="footer-links" aria-label="Footer navigation">
+          <a class="js-scroll" href="#top">Home</a>
+          <a class="js-scroll" href="#about">About</a>
+          <a class="js-scroll" href="#model">Model</a>
+          <a class="js-scroll" href="#community">Community</a>
+          <a class="js-scroll" href="#contact">Contact</a>
+        </div>
+        <small>&copy; 2026 Institute of Digital Risk. All rights reserved.</small>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

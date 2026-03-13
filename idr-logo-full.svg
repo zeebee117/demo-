@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 180" role="img" aria-labelledby="title desc">
+  <title id="title">Institute of Digital Risk Logo</title>
+  <desc id="desc">Cube icon paired with institute name in futuristic typography.</desc>
+  <rect width="720" height="180" fill="none"/>
+  <g transform="translate(18 10)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="80 18 128 46 128 104 80 132 32 104 32 46" stroke="#FF6A00" stroke-width="4"/>
+    <polyline points="80 18 80 76 32 104" stroke="#FF6A00" stroke-width="4"/>
+    <polyline points="80 76 128 104" stroke="#FF6A00" stroke-width="4"/>
+    <polyline points="80 76 32 46" stroke="#FFFFFF" stroke-width="3" opacity="0.9"/>
+    <polyline points="80 76 128 46" stroke="#FFFFFF" stroke-width="3" opacity="0.9"/>
+    <polyline points="80 132 80 76" stroke="#FFFFFF" stroke-width="3" opacity="0.9"/>
+    <polygon points="80 34 112 52 112 88 80 106 48 88 48 52" stroke="#FF6A00" stroke-width="3" opacity="0.85"/>
+    <circle cx="80" cy="76" r="3.5" fill="#FF6A00" stroke="none"/>
+  </g>
+  <g transform="translate(190 74)">
+    <text x="0" y="0" font-size="40" font-family="Orbitron, 'Eurostile', sans-serif" font-weight="700" letter-spacing="2" fill="#FFFFFF">INSTITUTE OF</text>
+    <text x="0" y="48" font-size="54" font-family="Orbitron, 'Eurostile', sans-serif" font-weight="800" letter-spacing="2" fill="#FF6A00">DIGITAL RISK</text>
+    <line x1="0" y1="62" x2="492" y2="62" stroke="#FFFFFF" stroke-opacity="0.55"/>
+  </g>
+</svg>

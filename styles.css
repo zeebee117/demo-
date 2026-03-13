@@ -312,6 +312,7 @@ main section {
   perspective: 1100px;
   perspective-origin: 50% 42%;
   transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
   --cube-glow-x: 0px;
   --cube-glow-y: 0px;
   display: grid;
@@ -328,6 +329,7 @@ main section {
   height: var(--cube-size);
   position: relative;
   transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
   transform: rotateX(-24deg) rotateY(28deg) rotateZ(2deg);
   animation: spinCube 12s linear infinite;
   box-shadow: var(--cube-glow-x) var(--cube-glow-y) 28px rgba(255, 106, 0, 0.26);
@@ -353,9 +355,10 @@ main section {
   width: var(--cube-size);
   height: var(--cube-size);
   border: 2px solid rgba(255, 106, 0, 0.75);
-  background: linear-gradient(155deg, rgba(255, 106, 0, 0.2), rgba(255, 106, 0, 0.04) 58%, rgba(0, 0, 0, 0.22));
+  background: linear-gradient(155deg, rgba(255, 106, 0, 0.24), rgba(255, 106, 0, 0.07) 58%, rgba(0, 0, 0, 0.25));
   box-shadow: inset 0 0 30px rgba(255, 106, 0, 0.18), 0 0 14px rgba(255, 106, 0, 0.18);
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .cube-face::before {
@@ -371,32 +374,32 @@ main section {
 
 .front {
   transform: translateZ(var(--half-cube));
-  filter: brightness(1.15);
+  background: linear-gradient(150deg, rgba(255, 142, 64, 0.34), rgba(255, 106, 0, 0.12) 62%, rgba(0, 0, 0, 0.2));
 }
 
 .back {
   transform: rotateY(180deg) translateZ(var(--half-cube));
-  filter: brightness(0.65);
+  background: linear-gradient(155deg, rgba(255, 106, 0, 0.12), rgba(255, 106, 0, 0.03) 62%, rgba(0, 0, 0, 0.36));
 }
 
 .right {
   transform: rotateY(90deg) translateZ(var(--half-cube));
-  filter: brightness(0.9);
+  background: linear-gradient(150deg, rgba(255, 126, 32, 0.27), rgba(255, 106, 0, 0.08) 58%, rgba(0, 0, 0, 0.29));
 }
 
 .left {
   transform: rotateY(-90deg) translateZ(var(--half-cube));
-  filter: brightness(0.72);
+  background: linear-gradient(160deg, rgba(255, 106, 0, 0.16), rgba(255, 106, 0, 0.05) 58%, rgba(0, 0, 0, 0.34));
 }
 
 .top {
   transform: rotateX(90deg) translateZ(var(--half-cube));
-  filter: brightness(1.06);
+  background: linear-gradient(160deg, rgba(255, 155, 83, 0.32), rgba(255, 106, 0, 0.1) 62%, rgba(0, 0, 0, 0.18));
 }
 
 .bottom {
   transform: rotateX(-90deg) translateZ(var(--half-cube));
-  filter: brightness(0.58);
+  background: linear-gradient(160deg, rgba(255, 106, 0, 0.08), rgba(255, 106, 0, 0.02) 62%, rgba(0, 0, 0, 0.42));
 }
 
 .inner-cube {
@@ -406,6 +409,7 @@ main section {
   top: calc((var(--cube-size) - var(--inner-size)) / 2);
   left: calc((var(--cube-size) - var(--inner-size)) / 2);
   transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
   transform: translateZ(calc(var(--cube-size) * 0.08)) rotateX(-8deg) rotateY(12deg);
   animation: innerSpin 9s ease-in-out infinite alternate;
 }
@@ -418,6 +422,7 @@ main section {
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.06), rgba(255, 106, 0, 0.07));
   box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.15);
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .inner-front {

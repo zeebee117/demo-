@@ -14,12 +14,14 @@ const closeMobileMenu = () => {
   if (!siteHeader || !navToggle) return;
   siteHeader.classList.remove('nav-open');
   navToggle.setAttribute('aria-expanded', 'false');
+  document.body.classList.remove('menu-open');
 };
 
 if (navToggle && siteHeader) {
   navToggle.addEventListener('click', () => {
     const isOpen = siteHeader.classList.toggle('nav-open');
     navToggle.setAttribute('aria-expanded', String(isOpen));
+    document.body.classList.toggle('menu-open', isOpen);
   });
 
   document.addEventListener('click', (event) => {

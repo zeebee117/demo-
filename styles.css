@@ -26,10 +26,15 @@ body {
   font-family: "Space Grotesk", "Segoe UI", sans-serif;
   scroll-behavior: auto;
   overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
   position: relative;
+}
+
+body.menu-open {
+  overflow: hidden;
 }
 
 .ambient-bg {
@@ -254,6 +259,7 @@ main section {
   color: var(--muted);
   max-width: 60ch;
   font-size: 1.02rem;
+  line-height: 1.65;
 }
 
 .hero-cta {
@@ -268,6 +274,10 @@ main section {
   color: var(--text);
   background: transparent;
   padding: 0.8rem 1.15rem;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 0.55rem;
   font-size: 0.93rem;
   letter-spacing: 0.08em;
@@ -601,6 +611,7 @@ textarea {
   background: #050505;
   color: var(--text);
   padding: 0.7rem 0.75rem;
+  min-height: 44px;
   font: inherit;
 }
 
@@ -710,10 +721,15 @@ textarea:focus {
   .hero-visual {
     order: -1;
     min-height: 320px;
+    perspective: 1250px;
+    perspective-origin: 50% 40%;
   }
 
   .cube-scene {
     --cube-size: 210px;
+    transform: rotateX(-30deg) rotateY(30deg) rotateZ(2deg);
+    animation-name: spinCubeTablet;
+    animation-duration: 10.5s;
   }
 
   .cards-grid,
@@ -735,6 +751,8 @@ textarea:focus {
 @media (max-width: 840px) {
   .nav-wrap {
     position: relative;
+    padding-left: max(0.75rem, env(safe-area-inset-left));
+    padding-right: max(0.75rem, env(safe-area-inset-right));
   }
 
   .nav-toggle {
@@ -744,8 +762,11 @@ textarea:focus {
   .nav-links {
     position: absolute;
     right: 0.75rem;
+    left: 0.75rem;
     top: calc(100% + 8px);
-    width: min(92vw, 340px);
+    width: auto;
+    max-height: min(70vh, 420px);
+    overflow-y: auto;
     background: rgba(5, 5, 5, 0.98);
     border: 1px solid rgba(255, 106, 0, 0.36);
     border-radius: 0.8rem;
@@ -768,7 +789,9 @@ textarea:focus {
   }
 
   .nav-links a {
-    display: block;
+    display: flex;
+    align-items: center;
+    min-height: 44px;
     border-radius: 0.5rem;
     padding: 0.62rem 0.72rem;
   }
@@ -777,7 +800,31 @@ textarea:focus {
 @media (max-width: 640px) {
   main section {
     padding: 3.6rem 0.85rem;
+    padding-left: max(0.85rem, env(safe-area-inset-left));
+    padding-right: max(0.85rem, env(safe-area-inset-right));
     scroll-margin-top: 78px;
+  }
+
+  .hero {
+    gap: 1.2rem;
+    padding-top: 1.2rem;
+  }
+
+  .hero-copy {
+    text-align: center;
+  }
+
+  .hero-copy p {
+    margin-inline: auto;
+    font-size: 0.97rem;
+  }
+
+  .hero-kicker {
+    font-size: 0.68rem;
+  }
+
+  .section-title {
+    line-height: 1.25;
   }
 
   .nav-wrap {
@@ -811,11 +858,36 @@ textarea:focus {
   }
 
   .hero-visual {
-    min-height: 280px;
+    min-height: 300px;
+    perspective: 1400px;
+    perspective-origin: 50% 36%;
   }
 
   .cube-scene {
-    --cube-size: 176px;
+    --cube-size: 190px;
+    transform: rotateX(-34deg) rotateY(34deg) rotateZ(3deg);
+    animation-name: spinCubeMobile;
+    animation-duration: 9.8s;
+  }
+
+  .cube-face {
+    border-width: 1.5px;
+  }
+
+  .cube-face::before {
+    inset: 10px;
+    background-size: 19px 19px;
+    opacity: 0.44;
+  }
+
+  .inner-cube {
+    transform: translateZ(calc(var(--cube-size) * 0.11)) rotateX(-14deg) rotateY(18deg);
+    animation-name: innerSpinMobile;
+    animation-duration: 7.5s;
+  }
+
+  .inner-face {
+    border-width: 1.5px;
   }
 
   .pipeline {
@@ -824,6 +896,39 @@ textarea:focus {
 
   .pipeline-step {
     font-size: 0.75rem;
+  }
+
+  .cube-card {
+    min-height: auto;
+    padding: 1rem;
+  }
+
+  .community-list li {
+    padding: 0.72rem 0.8rem;
+  }
+
+  .contact-card,
+  .contact-form {
+    padding: 0.9rem;
+  }
+
+  .contact-form form {
+    gap: 0.65rem;
+  }
+
+  input,
+  textarea,
+  button {
+    font-size: 16px;
+  }
+
+  .footer-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
   }
 
   .orb-a,
@@ -845,11 +950,63 @@ textarea:focus {
   }
 
   .cube-scene {
-    --cube-size: 154px;
+    --cube-size: 170px;
   }
 
   .hero h1 {
     font-size: clamp(1.6rem, 8vw, 2.2rem);
+  }
+}
+
+@media (hover: none) {
+  .cube-card:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: rgba(255, 106, 0, 0.33);
+  }
+
+  .btn:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+@keyframes spinCubeTablet {
+  0% {
+    transform: rotateX(-30deg) rotateY(20deg) rotateZ(1deg);
+  }
+  33% {
+    transform: rotateX(-24deg) rotateY(122deg) rotateZ(-1deg);
+  }
+  66% {
+    transform: rotateX(-34deg) rotateY(238deg) rotateZ(3deg);
+  }
+  100% {
+    transform: rotateX(-30deg) rotateY(380deg) rotateZ(1deg);
+  }
+}
+
+@keyframes spinCubeMobile {
+  0% {
+    transform: rotateX(-34deg) rotateY(28deg) rotateZ(2deg);
+  }
+  34% {
+    transform: rotateX(-27deg) rotateY(130deg) rotateZ(-1deg);
+  }
+  68% {
+    transform: rotateX(-36deg) rotateY(248deg) rotateZ(3deg);
+  }
+  100% {
+    transform: rotateX(-34deg) rotateY(388deg) rotateZ(2deg);
+  }
+}
+
+@keyframes innerSpinMobile {
+  0% {
+    transform: translateZ(calc(var(--cube-size) * 0.11)) rotateX(-16deg) rotateY(16deg);
+  }
+  100% {
+    transform: translateZ(calc(var(--cube-size) * 0.11)) rotateX(12deg) rotateY(-18deg);
   }
 }
 

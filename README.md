@@ -72,32 +72,6 @@ Internship/
 
 ## 🚀 Getting Started
 
-### Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/idr-website.git
-   cd idr-website
-   ```
-
-2. No build process required! All files are static.
-
-### Running Locally
-Open `index.html` in a modern web browser:
-- Double-click the file, or
-- Use a local server for best results:
-  ```bash
-  # Python 3
-  python -m http.server 8000
-  
-  # Python 2
-  python -m SimpleHTTPServer 8000
-  
-  # Node.js (http-server)
-  npx http-server
-  ```
-
-Then navigate to `http://localhost:8000` in your browser.
-
 ## 💻 Browser Support
 
 - **Modern browsers** (Chrome, Firefox, Safari, Edge) with support for:
@@ -184,42 +158,11 @@ Two SVG logos are included:
 
 Both use the same orange/white color scheme and are inline-compatible in HTML.
 
-## 🔧 Maintenance & Deployment
 
-### To modify content:
-1. Edit text in `index.html`
-2. Update links in nav and footer
-3. Adjust colors in `:root` variables in `styles.css`
-
-### To deploy:
-- Static site — works on any host (GitHub Pages, Netlify, Vercel, traditional hosting)
-- No backend or build step required
-- All assets are local (no external dependencies except Google Fonts)
-
-### Performance tips:
-- Google Fonts load via `preconnect` for speed
-- CSS and JS are minimized and scoped
-- No unused framework bloat
-- Ambient background orbs use CSS animations (GPU-accelerated)
-
-## 🤝 Contributing
-
-Contributions are welcome! Please:
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/your-feature`)
-3. Commit your changes (`git commit -m 'Add your feature'`)
-4. Push to the branch (`git push origin feature/your-feature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is open source. Please see the LICENSE file (if included) or specify your preferred license.
 
 ## 📧 Contact
 
-**Institute of Digital Risk**
-- Email: contact@idr.org
-- Website: [IDR Homepage](./index.html)
+- Email: ghorizeeshana@gmail.com
 
 ---
 
